@@ -1,0 +1,22 @@
+syntax = "proto3";
+package com.example.grpc;
+
+message LicensePlateRequest{
+
+  string PlateRequest = 1;
+
+  repeated string PlateListRequest = 2;
+
+}
+
+message LicensePlateResponse{
+
+  string PlateResponse = 1;
+
+}
+
+service LicensePlateService{
+
+  rpc greeting(LicensePlateRequest) returns (LicensePlateResponse);
+
+}
